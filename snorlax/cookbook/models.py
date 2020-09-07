@@ -39,4 +39,4 @@ class Step(models.Model):
     text = models.CharField(max_length=512)
     preparation_time = models.DurationField()
     cooking_time = models.DurationField()
-    dish = models.ForeignKey("Recipe", on_delete=models.CASCADE)
+    dish = models.ForeignKey("Recipe", related_name="steps", on_delete=models.CASCADE)
