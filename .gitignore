@@ -10,3 +10,6 @@ __pycache__/
 modules.xml
 .idea/misc.xml
 *.ipr
+
+# Ignore our database
+*.sqlite3
