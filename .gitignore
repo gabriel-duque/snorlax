@@ -1,0 +1,12 @@
+# Python stuff
+venv
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Pycharm stuff
+.idea
+*.iml
+modules.xml
+.idea/misc.xml
+*.ipr
