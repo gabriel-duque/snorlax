@@ -6,6 +6,10 @@ class Ingredient(models.Model):
 
     name = models.CharField(max_length=512)
 
+    def __str__(self):
+        """Return a human-readable representation of this object."""
+        return self.name
+
 
 class IngredientAmount(models.Model):
     """An ingredient associated with an amount."""
@@ -23,6 +27,10 @@ class IngredientAmount(models.Model):
     unit = models.CharField(max_length=32)
     note = models.CharField(max_length=256)
 
+    def __str__(self):
+        """Return a human-readable representation of this object."""
+        return f"{self.ingredient}: {self.amount} {self.unit}"
+
 
 class Recipe(models.Model):
     """A dish or cocktail."""
@@ -32,6 +40,10 @@ class Recipe(models.Model):
         "Ingredient", through="IngredientAmount", related_name="dishes"
     )
 
+    def __str__(self):
+        """Return a human-readable representation of this object."""
+        return self.name
+
 
 class Step(models.Model):
     """A single step in a dish or cocktail recipe."""
@@ -40,3 +52,7 @@ class Step(models.Model):
     preparation_time = models.DurationField()
     cooking_time = models.DurationField()
     dish = models.ForeignKey("Recipe", related_name="steps", on_delete=models.CASCADE)
+
+    def __str__(self):
+        """Return a human-readable representation of this object."""
+        return self.text
