@@ -25,9 +25,11 @@ RUN apk add --no-cache \
             musl-dev \
             openssl-dev
 
-COPY requirements.txt snorlax ./
+COPY requirements.txt .
 
 RUN pip install -r requirements.txt
+
+COPY snorlax snorlax
 
 WORKDIR snorlax
 
