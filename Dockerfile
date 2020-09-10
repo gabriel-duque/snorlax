@@ -37,6 +37,8 @@ RUN mkdir persistent && chown 1000:1000 persistent
 
 USER 1000:1000
 
+EXPOSE 8000
+
 VOLUME persistent
 
 ENTRYPOINT ["/snorlax/snorlax.sh"]
