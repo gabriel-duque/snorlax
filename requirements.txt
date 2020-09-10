@@ -1,1 +1,3 @@
+daphne
 Django
+whitenoise[brotli]
