@@ -33,7 +33,8 @@ COPY snorlax snorlax
 
 WORKDIR snorlax
 
-RUN mkdir persistent && chown 1000:1000 persistent
+RUN mkdir persistent staticfiles \
+    && chown 1000:1000 persistent staticfiles cookbook/migrations
 
 USER 1000:1000
 
