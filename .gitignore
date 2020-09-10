@@ -13,3 +13,6 @@ modules.xml
 
 # Ignore our database
 *.sqlite3
+
+# Ignore migrations
+migrations
