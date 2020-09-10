@@ -16,3 +16,6 @@ modules.xml
 
 # Ignore migrations
 migrations
+
+# Ignore static files
+staticfiles
