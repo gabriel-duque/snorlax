@@ -52,7 +52,9 @@ class Step(models.Model):
     text = models.CharField(max_length=512)
     preparation_time = models.DurationField(blank=True)
     cooking_time = models.DurationField(blank=True)
-    dish = models.ForeignKey("Recipe", related_name="steps", on_delete=models.CASCADE)
+    dish = models.ForeignKey(
+        "Recipe", related_name="steps", on_delete=models.CASCADE
+    )
 
     def __str__(self):
         """Return a human-readable representation of this object."""
